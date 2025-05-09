@@ -1,0 +1,7 @@
+Run this command to get detailed logs:
+
+flutter run --verbose
+
+You'll see the debug logs we added in the console output. Look for:
+- "App starting" and other messages from main.dart
+- "AnimatedSplashScreen" related messages from the splash screen code

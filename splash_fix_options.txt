@@ -1,0 +1,35 @@
+# Options to Fix the Black Native Splash Screen
+
+## Option 1: Change the background color to white
+Modify the background.png file to be white instead of black. This is the simplest approach.
+
+1. Create a white PNG image
+2. Replace the file at:
+   C:\Projects\flutter\wakeai\android\app\src\main\res\drawable\background.png
+
+## Option 2: Modify the launch_background.xml to use a white color
+1. Edit the launch_background.xml files (both regular and -v21 versions) to:
+   - Replace the bitmap background with a solid white color
+   - Example in the file below
+
+## Option 3: Use flutter_native_splash to regenerate with white background
+1. Keep the current flutter_native_splash.yaml (which specifies white background)
+2. Run:
+   dart run flutter_native_splash:create
+   flutter clean
+   flutter run
+
+## Option 4: Remove Native Splash Screen completely
+1. Edit AndroidManifest.xml to use NormalTheme instead of LaunchTheme
+2. This will bypass the native splash screen entirely
+
+# Example for Option 2 (Modified launch_background.xml):
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@android:color/white" />
+    <item>
+        <bitmap android:gravity="center" android:src="@drawable/splash"/>
+    </item>
+</layer-list>
+```

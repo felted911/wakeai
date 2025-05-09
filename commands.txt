@@ -1,0 +1,7 @@
+1. Regenerate the splash screen:
+dart run flutter_native_splash:create
+
+2. After that's complete, clean and build the app:
+flutter clean
+flutter pub get
+flutter run

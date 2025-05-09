@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <!-- Disable warnings about obsolete source and target options -->
+    <issue id="GradleDependency" severity="ignore" />
+    <issue id="ObsoleteSdkInt" severity="ignore" />
+    <issue id="OldTargetApi" severity="ignore" />
+    <issue id="GradlePluginVersion" severity="ignore" />
+    <issue id="GradleIdeError" severity="ignore" />
+    <issue id="ObsoleteLintCustomCheck" severity="ignore" />
+    <issue id="DeprecatedClassUsage" severity="ignore" />
+</lint>
